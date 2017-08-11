@@ -1,4 +1,5 @@
 FROM ubuntu
-RUN touch demo1 test1 abc xyz
-RUN mkdir /tmp/madhu
-RUN mkdir /tmp/madhu1
+RUN apt-get update
+RUN apt-get install apache2 -y
+EXPOSE 80 443
+CMD apache2ctl -D FOREGROUND
